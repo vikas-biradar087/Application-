@@ -39,16 +39,16 @@ public class GlobalExceptionHandler  extends ResponseEntityExceptionHandler {
 //	}
 	
 	
-//	// handle global exceptions
-//    @ExceptionHandler(Exception.class)
-//    public ResponseEntity<ApiResponse> handleAllException(
-//            Exception exception,
-//            WebRequest webRequest){
-//
-//        ApiResponse errorDetails = new ApiResponse(new Date(), exception.getMessage(),
-//                webRequest.getDescription(false));
-//        return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
-//    }
+	// handle global exceptions
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ApiResponse> handleAllException(
+            Exception exception,
+            WebRequest webRequest){
+
+        ApiResponse errorDetails = new ApiResponse(new Date(), exception.getMessage(),
+                webRequest.getDescription(false));
+        return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
     
 }
 
